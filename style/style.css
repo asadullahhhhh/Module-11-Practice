@@ -264,6 +264,8 @@
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
-        font-size: 1rem;
+    }
+    .main_area_logos img{
+        width: 60px;
     }
 }
