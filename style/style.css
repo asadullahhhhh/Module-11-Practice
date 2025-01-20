@@ -1,271 +1,370 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
 }
-:root{
-    --navItemColor : rgb(58, 58, 58);
-    --navbarColor : #ced6e0;
-    --primaryColor : rgb(224, 44, 109);
-    --white : #fff;
+:root {
+  --navItemColor: rgb(58, 58, 58);
+  --navbarColor: rgb(250, 250, 250);
+  --primaryColor: rgb(224, 44, 109);
+  --cardTitleColor: rgb(24, 25, 31);
+  --cardPriceColor: rgba(0, 0, 0, 0.87);
+  --cardDisColor: rgb(120, 120, 133);
+  --footerBackground: rgb(10, 8, 38);
+  --footerText: rgb(217, 219, 225);
+  --footerIconBackground: rgba(255, 255, 255, 0.1);
+  --white: #fff;
 }
 
 /* ==================================== Header Section ============================== */
-.header{
-    max-width: 1240px;
-    margin: 0 auto;
+.header {
+  max-width: 1240px;
+  margin: 0 auto;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }
-.navbar h2{
-    font-size: 1.8rem;
+.navbar h2 {
+  font-size: 1.8rem;
 }
 .nav_container ul {
-    display: flex;
-    gap: 2.125rem;
+  display: flex;
+  gap: 2.125rem;
 }
-.nav_container ul li{
-    list-style: none;
+.nav_container ul li {
+  list-style: none;
 }
 .nav_container ul li:nth-child(5),
-.nav_container ul li:nth-child(6){
-    cursor: pointer;
-    position: relative;
+.nav_container ul li:nth-child(6) {
+  cursor: pointer;
+  position: relative;
 }
 .nav_container ul li:nth-child(5):hover,
-.nav_container ul li:nth-child(6):hover{
-    color: var(--primaryColor);
+.nav_container ul li:nth-child(6):hover {
+  color: var(--primaryColor);
 }
-.cart_icon{
-    position: relative;
-    cursor: pointer;
+.cart_icon {
+  position: relative;
+  cursor: pointer;
 }
-.icon_dot{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: #000;
-    border-radius: 50%;
-    top: 3px;
+.icon_dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 3px;
 }
-.nav_container ul li a{
-    text-decoration: none;
-    color: var(--navItemColor);
-    font-size: 0.9rem;
-    font-weight: 600;
+.nav_container ul li a {
+  text-decoration: none;
+  color: var(--navItemColor);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
-.nav_container ul li a:hover{
-    color: var(--primaryColor);
+.nav_container ul li a:hover {
+  color: var(--primaryColor);
 }
 /* ************************ Navbar display--> none items ******************** */
 #hamb,
 .hmb,
 .hamburger,
-.cart_icon{
-    display: none;
+.cart_icon {
+  display: none;
 }
 
 /* ============================= body Mian area section ======================= */
-.header_main_area{
-    max-width: 1240px;
-    margin: 0 auto;
-    margin-top: 80px;
+.header_main_area {
+  max-width: 1240px;
+  margin: 0 auto;
+  margin-top: 80px;
 }
-.main_container{
-    display: flex;
+.main_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_area_text h2 {
+  font-size: 3.25rem;
+}
+.main_area_text p {
+  margin: 16px 0;
+  max-width: 500px;
+  font-size: 1rem;
+  color: var(--navItemColor);
+}
+.main_area_text button {
+  padding: 10px 24px;
+  border: 1px solid transparent;
+  border-radius: 41px;
+  background-color: var(--primaryColor);
+  color: var(--white);
+  cursor: pointer;
+}
+.main_area_text button:hover {
+  background-color: var(--white);
+  border: 1px solid var(--primaryColor);
+  color: var(--primaryColor);
+}
+.main_area_image {
+  background-image: url("../images/Circle\ design.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main_area_image img {
+  width: 100%;
+}
+.main_area_logos {
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+/* ===================================== Card Section ============================ */
+.main_container_head {
+  max-width: 1240px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.main_container_head .container h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--navItemColor);
+  margin-bottom: 30px;
+}
+.main_area_card_section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.card {
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.card h5 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.card h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--cardPriceColor);
+  margin-bottom: 10px;
+}
+.card p {
+  width: 196px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--cardDisColor);
+}
+.see_more {
+  margin-top: 50px;
+  text-align: right;
+}
+.see_more a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+/* ====================================== Feature Area ================================ */
+.feature {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 96px;
+}
+.feature_info h2 {
+  font-size: 2.5rem;
+}
+.feature_info p {
+  max-width: 500px;
+  font-size: 1rem;
+  margin: 16px 0;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--navItemColor);
+}
+.feature_info button {
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  color: var(--white);
+  background-color: var(--primaryColor);
+  cursor: pointer;
+  transition: 0.1s;
+}
+.feature_info button:hover {
+  background-color: var(--white);
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+}
+/* ================================ Footer ================================ */
+.footer {
+  background-color: var(--footerBackground);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0;
+}
+.ft_text h2 {
+  font-size: 1.5rem;
+}
+.ft_text p {
+  font-size: 1rem;
+  color: var(--footerText);
+}
+.ft_image {
+  margin-top: 17px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.ft_image a {
+  color: var(--white);
+  background-color: var(--footerIconBackground);
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    position: relative;
     justify-content: space-between;
-    align-items: center;
-}
-.main_area_text h2{
-    font-size: 3.25rem;
-}
-.main_area_text p{
-    margin: 16px 0;
-    max-width: 500px;
-    font-size: 1rem;
-    color: var(--navItemColor);
-}
-.main_area_text button{
-    padding: 10px 24px;
-    border: 1px solid transparent;
-    border-radius: 41px;
-    background-color: var(--primaryColor);
-    color: var(--white);
+  }
+  .nav_container {
+    position: absolute;
+    top: 6%;
+    left: -300px;
+  }
+  .nav_container {
+    width: 300px;
+    height: 100vh;
+    background-color: var(--navbarColor);
+    text-align: center;
+    border-radius: 0 5px 0 0;
+    transition: 0.5s;
+    z-index: 999;
+  }
+  .nav_container ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav_container ul li {
+    padding: 10px;
     cursor: pointer;
-}
-.main_area_text button:hover{
-    background-color: var(--white);
-    border: 1px solid var(--primaryColor);
+  }
+  .nav_container ul li:hover a {
     color: var(--primaryColor);
-}
-.main_area_image{
-    background-image: url("../images/Circle\ design.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.main_area_image img{
+  }
+  .nav_container ul li:nth-child(5),
+  .nav_container ul li:nth-child(6) {
+    display: none;
+  }
+  .navbar h2 {
+    font-size: 1rem;
+  }
+  .hmb,
+  .hamburger,
+  .cart_icon {
+    display: block;
+  }
+  .cart_icon:hover {
+    color: var(--primaryColor);
+  }
+  .hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  .hmb_common {
+    position: absolute;
     width: 100%;
-}
-.main_area_logos{
-    margin-top: 50px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    justify-items: center;
-    align-items: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:576px) {
-    .header{
-        width: calc(100% - 40px);
-        padding: 0 20px;
-        position: absolute;
-        justify-content: space-between;
-    }
-    .nav_container{
-        position: absolute;
-        top: 6%;
-        left: -300px;
-    }
-    .nav_container{
-        width: 300px;
-        height: 100vh;
-        background-color: var(--navbarColor);
-        text-align: center;
-        border-radius: 0 5px 0 0;
-        transition: 0.5s ;
-        z-index: 999;
-    }
-    .nav_container ul{
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav_container ul li{
-        padding: 10px;
-        cursor: pointer;
-    }
-    .nav_container ul li:hover a{
-        color: var(--primaryColor);
-    }
-    .nav_container ul li:nth-child(5),
-    .nav_container ul li:nth-child(6){
-        display: none;
-    }
-    .navbar h2{
-        font-size: 1rem;
-    }
-    .hmb,
-    .hamburger,
-    .cart_icon{
-        display: block;
-    }
-    .cart_icon:hover{
-        color: var(--primaryColor);
-    }
-    .hamburger{
-        width: 30px;
-        height: 20px;
-        position: relative;
-        cursor: pointer;
-    }
-    .hmb_common{
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        border-radius: 10px;
-        background-color: #000;
-    }
-    .hmb_top{
-        top: 0;
-    }
-    .hmb_middle{
-        top: 40%;
-    }
-    .hmb_bottom{
-        bottom: 0;
-    }
-    #hamb:checked ~ .nav_container{
-        left: 0;
-    }
-    /* ============================== Header main area ==================== */
-    .main_container{
-        flex-direction: column-reverse;
-    }
-    .main_area_text{
-        margin-top: 25px;
-        text-align: center;
-    }
-    .main_area_text h2{
-        font-size: 2rem;
-    }
-    .main_area_text p{
-        padding: 0 16px;
-    }
-    .main_area_image{
-        background-size: contain;
-    }
-    .main_area_logos{
-        border-top: none;
-        border-bottom: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-    .main_area_logos img{
-        width: 60px;
-    }
+    height: 3px;
+    border-radius: 10px;
+    background-color: #000;
+  }
+  .hmb_top {
+    top: 0;
+  }
+  .hmb_middle {
+    top: 40%;
+  }
+  .hmb_bottom {
+    bottom: 0;
+  }
+  #hamb:checked ~ .nav_container {
+    left: 0;
+  }
+  /* ============================== Header main area ==================== */
+  .main_container {
+    flex-direction: column-reverse;
+  }
+  .main_area_text {
+    margin-top: 25px;
+    text-align: center;
+  }
+  .main_area_text h2 {
+    font-size: 2rem;
+  }
+  .main_area_text p {
+    padding: 0 16px;
+  }
+  .main_area_image {
+    background-size: contain;
+  }
+  .main_area_logos {
+    border-top: none;
+    border-bottom: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .main_area_logos img {
+    width: 60px;
+  }
+  /* ============================ Cards Area ========================= */
+  .main_container_head {
+    padding: 0 20px;
+  }
+  .main_area_card_section {
+    grid-template-columns: 1fr;
+  }
+  .main_area_card_section .card:hover {
+    transform: none;
+  }
+  /* =========================== Feature Area =========================== */
+  .feature {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .feature_image img {
+    width: 100%;
+  }
+  .feature_info h2 {
+    font-size: 1.5rem;
+  }
 }
